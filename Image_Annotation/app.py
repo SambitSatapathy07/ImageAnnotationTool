@@ -1,5 +1,5 @@
 #1 Import necessary dependencies
-from flask import Flask, render_template, request, url_for, send_file
+from flask import Flask, render_template, request, url_for, send_file, redirect
 import os
 import cv2
 import numpy as np
