@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOLO Image Annotation</title>
+    <title>Image Annotation</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -31,7 +31,7 @@
         </ul>
     </nav>
     <div class="container">
-        <h1>Image Annotation</h1>
+        <h1>Image Annotation Tool</h1>
 
         <form method="post" enctype="multipart/form-data">
             
@@ -41,12 +41,7 @@
 
             <input type="file" id="file-upload" name="file" class="file-upload">
         
-            <!-- <label class = "image-url" for="url"> 
-                <h3 id="or"> OR</h3>
-                <h3>  </h3>
-            </label> -->
-
-            <input type="text" name="url" id="url-box" placeholder="Or Enter Image URL">
+            <input type="text" name="url" id="url-box" placeholder="Or Enter Valid Image URL">
             <br>
             <button type="submit" class="button">Annotate</button>
         </form>
