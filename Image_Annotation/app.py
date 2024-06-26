@@ -15,7 +15,7 @@ app.config['UPLOAD_FOLDER'] = 'uploads'
 
 #3 Function to fetch image from URL
 def fetch_image_from_url(url):
-    response = requests.get(url)  # Send a GET request to the URL
+    response = requests.get(url)
     if response.status_code == 200:  # Check if the request was successful
         image = Image.open(BytesIO(response.content))
         
@@ -30,7 +30,7 @@ def fetch_image_from_url(url):
         basepath = os.path.dirname(__file__)
         filename = os.path.basename(url)
         filepath = os.path.join(basepath, app.config['UPLOAD_FOLDER'], filename)
-        image.save(filepath) # Save the image to the specified path
+        image.save(filepath)
         return image, filepath
     
     else:
